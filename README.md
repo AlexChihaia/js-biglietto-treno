@@ -12,7 +12,7 @@
         - chilometri da percorrere * prezzo (0.21 €)
 
 
-3) va applicato uno sconto del 20% per i minorenni
-   va applicato uno sconto del 40% per gli over 65.
+3)  - va applicato uno sconto del 20% per i minorenni
+    - va applicato uno sconto del 40% per gli over 65.
 
 4) L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
