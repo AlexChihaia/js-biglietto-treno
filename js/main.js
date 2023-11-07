@@ -20,20 +20,18 @@ const passengerAge = Number(prompt('Inserisci la tua età'))
 
 const ticketPrice = (tripLenght * 0.21)
 
+const kidsDiscount = 20
+const elderDiscount = 40
 
 
-if (!isNaN(tripLenght)) {
+
+if (!isNaN(tripLenght) && !isNaN(passengerAge)) {
     console.log('km :' + 'sono un numero :' + tripLenght);
 }
 else {
     console.log('km :' + 'non sono un numero :' + tripLenght);
 }
-if (!isNaN(passengerAge)) {
-    console.log('età :' + 'sono un numero :' + passengerAge);
-}
-else {
-    console.log('età :' + 'non sono un numero :' + passengerAge);
-}
+
 
 
 
@@ -41,11 +39,11 @@ else {
 //3) - va applicato uno sconto del 20 % per i minorenni
 //   - va applicato uno sconto del 40 % per gli over 65.
 
-const kidsPrice = (ticketPrice - (ticketPrice / 100 * 20));
+const kidsPrice = (ticketPrice - (ticketPrice / 100 * kidsDiscount));
 
 const kidsRounded = Math.round((kidsPrice + Number.EPSILON) * 100) / 100;
 
-const elderPrice = (ticketPrice - (ticketPrice / 100 * 40));
+const elderPrice = (ticketPrice - (ticketPrice / 100 * elderDiscount));
 
 const elderRounded = Math.round((elderPrice + Number.EPSILON) * 100) / 100;
 
