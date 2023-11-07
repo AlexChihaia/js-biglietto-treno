@@ -8,10 +8,11 @@ const priceElement = document.getElementById('price')
 
 //- Prompt con il numero di chilometri da percorrere 
 
-const tripLenght = prompt('Inserisci km da percorrere')
+const tripLenght = Number(prompt('Inserisci km da percorrere'))
+
 
 //- Prompt con l'età del passeggero
-const passengerAge = prompt('Inserisci la tua età')
+const passengerAge = Number(prompt('Inserisci la tua età'))
 
 //2) Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 //- definire il prezzo del biglietto in base ai km con un(0.21 € al km)
@@ -21,15 +22,30 @@ const ticketPrice = (tripLenght * 0.21)
 
 
 
+if (!isNaN(tripLenght)) {
+    console.log('km :' + 'sono un numero :' + tripLenght);
+}
+else {
+    console.log('km :' + 'non sono un numero :' + tripLenght);
+}
+if (!isNaN(passengerAge)) {
+    console.log('età :' + 'sono un numero :' + passengerAge);
+}
+else {
+    console.log('età :' + 'non sono un numero :' + passengerAge);
+}
+
+
+
 
 //3) - va applicato uno sconto del 20 % per i minorenni
 //   - va applicato uno sconto del 40 % per gli over 65.
 
-const kidsPrice = (ticketPrice * 0.8);
+const kidsPrice = (ticketPrice - (ticketPrice / 100 * 20));
 
 const kidsRounded = Math.round((kidsPrice + Number.EPSILON) * 100) / 100;
 
-const elderPrice = (ticketPrice * 0.6);
+const elderPrice = (ticketPrice - (ticketPrice / 100 * 40));
 
 const elderRounded = Math.round((elderPrice + Number.EPSILON) * 100) / 100;
 
