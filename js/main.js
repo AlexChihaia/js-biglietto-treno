@@ -8,7 +8,7 @@ const priceElement = document.getElementById('price')
 
 //- Prompt con il numero di chilometri da percorrere 
 
-const tripLenght = Number(prompt('Inserisci km da percorrere'))
+const tripLength = Number(prompt('Inserisci km da percorrere'))
 
 
 //- Prompt con l'età del passeggero
@@ -25,11 +25,11 @@ const elderDiscount = 40
 
 
 
-if (!isNaN(tripLenght) && !isNaN(passengerAge)) {
-    console.log('km :' + 'sono un numero :' + tripLenght);
+if (!isNaN(tripLength) && !isNaN(passengerAge)) {
+    console.log('km :' + 'sono un numero :' + tripLength);
 }
 else {
-    console.log('km :' + 'non sono un numero :' + tripLenght);
+    console.log('km :' + 'non sono un numero :' + tripLength);
 }
 
 
